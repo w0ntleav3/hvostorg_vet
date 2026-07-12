@@ -1,0 +1,188 @@
+/* AdminPetTypes.module.css */
+
+.wrapper {
+  min-height: 100vh;
+  background: #f6f7f9;
+  padding: 30px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+h2 {
+  margin-bottom: 20px;
+  font-size: 28px;
+  color: #111827;
+}
+
+.topBar {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.search {
+  padding: 12px 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  font-size: 14px;
+  background: white;
+  outline: none;
+  transition: 0.2s;
+}
+
+.search:focus {
+  border-color: #4c7cff;
+  box-shadow: 0 0 0 3px rgba(76, 124, 255, 0.15);
+}
+
+.addBlock {
+  display: flex;
+  gap: 12px;
+}
+
+.input {
+  flex: 1;
+  padding: 12px 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  font-size: 14px;
+  background: white;
+  outline: none;
+  transition: 0.2s;
+}
+
+.input:focus {
+  border-color: #4c7cff;
+  box-shadow: 0 0 0 3px rgba(76, 124, 255, 0.15);
+}
+
+.addBtn {
+  padding: 12px 18px;
+  border: none;
+  border-radius: 10px;
+  background: #4c7cff;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.addBtn:hover {
+  background: #3b68e8;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+}
+
+.table th,
+.table td {
+  padding: 14px 16px;
+  border-bottom: 1px solid #e5e7eb;
+  text-align: left;
+  font-size: 14px;
+}
+
+.table th {
+  background: #f9fafb;
+  font-weight: 600;
+  color: #111827;
+}
+
+.table tr:hover td {
+  background: #f3f4f6;
+}
+
+.empty {
+  text-align: center;
+  padding: 30px;
+  color: #6b7280;
+}
+
+th {
+  cursor: pointer;
+  user-select: none;
+}
+
+th:hover {
+  opacity: 0.8;
+}
+
+/* Оверлей (задний фон модалки) */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Контентное окно */
+.modalContent {
+  background: white;
+  padding: 24px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.modalContent h3 {
+  margin-top: 0;
+  margin-bottom: 16px;
+  color: #333;
+}
+
+/* Инпут внутри модалки */
+.modalInput {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+}
+
+/* Кнопки */
+.modalActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.cancelBtn {
+  background: #f3f4f6;
+  color: #4b5563;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.cancelBtn:hover {
+  background: #e5e7eb;
+}
+
+.saveBtn {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.saveBtn:hover {
+  background: #1d4ed8;
+}

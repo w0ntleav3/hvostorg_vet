@@ -1,0 +1,274 @@
+.dashboard {
+  min-height: 100vh;
+  background: #f6f7f9;
+  padding: 30px;
+  font-family: system-ui;
+}
+
+.backBtn {
+  background: none;
+  border: none;
+  color: #4c7cff;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 8px 12px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border-radius: 8px;
+  transition: background 0.2s;
+}
+
+.backBtn:hover {
+  background: #eef2ff;
+}
+
+.backBtn:active {
+  transform: translateX(-2px);
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+section {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+  margin-bottom: 20px;
+}
+
+.info p {
+  margin: 6px 0;
+  font-size: 14px;
+}
+
+.records h2,
+.records table,
+.diagnosis h2,
+.diagnosis table {
+  margin-top: 12px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+th, td {
+  padding: 8px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+th {
+  background: #f9fafb;
+  text-align: left;
+}
+
+input[type="text"], textarea, select {
+  padding: 6px 10px;
+  font-size: 13px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  width: 100%;
+  box-sizing: border-box;
+  transition: border 0.2s;
+}
+
+input[type="text"]:focus,
+textarea:focus,
+select:focus {
+  border-color: #4c7cff;
+  outline: none;
+}
+
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.sectionHeaderCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.actionBtn {
+  padding: 6px 12px;
+  font-size: 13px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.addBtn {
+  background: #4c7cff;
+  color: white;
+}
+
+.addBtn:hover {
+  background: #3a66e0;
+}
+
+.editBtn {
+  background: #eef2ff;
+  color: #4c7cff;
+}
+
+.editBtn:hover {
+  background: #e0e7ff;
+}
+
+/* модалка */
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal {
+  background: white;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  border-radius: 12px;
+  width: 400px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  animation: slideDown 0.2s ease-out;
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.modal label {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  gap: 6px;
+}
+
+.modalActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.cancelBtn,
+.saveBtn {
+  padding: 8px 16px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: all 0.2s ease;
+}
+
+.cancelBtn {
+  background: #f3f4f6;
+  color: #333;
+}
+
+.cancelBtn:hover {
+  background: #e5e7eb;
+}
+
+.cancelBtn:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 3px rgba(0,0,0,0.1);
+}
+
+.saveBtn {
+  background: #4c7cff;
+  color: white;
+}
+
+.saveBtn:hover {
+  background: #3a66e0;
+}
+
+.saveBtn:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 3px rgba(0,0,0,0.2);
+}
+
+/* Улучшаем внешний вид селекта для списка диагнозов */
+.modal select[size] {
+  padding: 4px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  background: white;
+  overflow-y: auto;
+  /* Обеспечиваем комфортную высоту */
+  height: auto; 
+}
+
+/* Стилизация optgroup для визуального разделения */
+.modal optgroup {
+  font-weight: 600;
+  color: #4c7cff;
+  padding: 4px 0;
+}
+
+/* Стилизация опций внутри */
+.modal option {
+  padding: 6px 8px;
+  cursor: pointer;
+}
+
+.modal option:checked {
+  background-color: #eff6ff;
+  color: #1e40af;
+}
+
+/* Улучшаем поле поиска */
+.searchInput {
+  padding: 10px 12px !important;
+  border: 2px solid #e5e7eb !important;
+  font-size: 14px !important;
+}
+
+.searchInput:focus {
+  border-color: #4c7cff !important;
+}
+
+/* Немного увеличим ширину модалки, так как список широкий */
+.modal {
+  width: 500px; /* Увеличили с 400px для комфортного выбора */
+  max-width: 90vw;
+}
+
+/* Добавим отступы для лейблов внутри модалки */
+.modal label {
+  font-weight: 500;
+  color: #374151;
+}
+
+th {
+  cursor: pointer;
+  user-select: none;
+}
+
+th:hover {
+  opacity: 0.8;
+}

@@ -1,0 +1,199 @@
+/* HEADER */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  height: 80px; 
+  background: white;
+  border-bottom: 1px solid #f0f0f0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+}
+
+.leftBlock {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+/* ОГРАНИЧИВАЕМ РАЗМЕР ЛОГОТИПА */
+.logo {
+  width: 45px;  /* Фиксированная ширина */
+  height: 45px; /* Фиксированная высота */
+  object-fit: contain; /* Чтобы картинка не деформировалась */
+  border-radius: 8px;  /* Мягкие углы для иконки */
+}
+
+.userLabel {
+  font-size: 14px;
+  font-weight: 500;
+  color: #4c7cff;
+  background: #f0f4ff;
+  padding: 6px 12px;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Уменьшили gap, так как у кнопок свои отступы */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Ссылки как кнопки */
+.menu a {
+  text-decoration: none;
+  color: #555;
+  font-weight: 500;
+  font-size: 15px;
+  padding: 10px 18px;
+  border-radius: 10px;
+  transition: all 0.25s ease;
+}
+
+.menu a:hover {
+  background: #f0f4ff;
+  color: #4c7cff;
+}
+
+/* Кнопка выхода */
+.logoutBtn {
+  background: #fff0f0;
+  border: none;
+  color: #d33;
+  padding: 10px 18px;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-left: 10px;
+  transition: all 0.25s ease;
+}
+
+.logoutBtn:hover {
+  background: #ffe0e0;
+  transform: translateY(-1px);
+}
+
+/* --- ОБНОВЛЕННАЯ СЕКЦИЯ КОНТАКТОВ --- */
+.contactSection {
+  margin: 80px 20px 120px;
+  padding: 80px 40px;
+  background: linear-gradient(135deg, #e0f0ff, #f7fbff); /* мягкий голубой градиент */
+  color: #1a1c23; /* тёмно-синий текст, читаемый на светлом фоне */
+  border-radius: 30px;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08); /* мягкая тень */
+}
+
+.contactSection h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #1a1c23; /* темно-синий заголовок */
+}
+
+.contactSection p {
+  opacity: 0.85;
+  font-size: 1.1rem;
+  margin: 8px 0;
+}
+
+.contactBtn {
+  display: inline-block;
+  margin-top: 35px;
+  padding: 18px 45px;
+  background: #4c7cff; /* яркая кнопка на светлом фоне */
+  color: white;
+  border-radius: 14px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 15px rgba(76, 124, 255, 0.3);
+}
+
+.contactBtn:hover {
+  background: #628eff;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(76, 124, 255, 0.4);
+}
+
+
+/* Остальные стили из предыдущего шага остаются без изменений */
+.homeWrapper {
+  min-height: 100vh;
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background: #fafafa;
+}
+
+.featuredSection {
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.featuredSection h2 {
+  font-size: 2.2rem;
+  margin-bottom: 60px;
+}
+
+.servicesGrid, .petsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 40px;
+  max-width: 1100px;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.petCard, .serviceCard {
+  background: white;
+  padding: 30px;
+  border-radius: 24px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+  transition: transform 0.3s ease;
+}
+
+.petCard:hover {
+  transform: translateY(-10px);
+}
+
+.petPhoto {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 18px;
+  margin-bottom: 20px;
+}
+
+.brandName {
+  font-size: 20px;
+  font-weight: 800; /* Жирный шрифт для акцента */
+  color: #1a1c23;   /* Глубокий темный цвет */
+  letter-spacing: 1px; /* Небольшой межбуквенный интервал */
+  margin-right: 10px;  /* Отступ от метки пользователя */
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Обновим отступ у левого блока, чтобы все элементы дышали */
+.leftBlock {
+  display: flex;
+  align-items: center;
+  gap: 12px; 
+}
+
+/* Немного подправим userLabel, чтобы он не сливался с названием */
+.userLabel {
+  font-size: 13px;
+  font-weight: 500;
+  color: #4c7cff;
+  background: #f0f4ff;
+  padding: 6px 14px;
+  border-radius: 20px;
+  white-space: nowrap;
+  margin-left: 5px; /* Дополнительный зазор */
+}

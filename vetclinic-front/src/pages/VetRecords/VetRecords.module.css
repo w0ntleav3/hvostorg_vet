@@ -1,0 +1,254 @@
+.page {
+  padding: 20px;
+  background: #f6f7fb;
+  min-height: 100vh;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+/* ====== layout ====== */
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 20px;
+  align-items: start;
+}
+
+.left {
+  min-width: 0;
+}
+
+.right {
+  position: sticky;
+  top: 20px;
+}
+
+/* ====== header ====== */
+
+h2 {
+  margin-bottom: 16px;
+  color: #111827;
+}
+
+/* ====== controls ====== */
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+.tabs {
+  display: flex;
+  gap: 8px;
+}
+
+.tabs button {
+  padding: 8px 14px;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+  background: white;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+.tabs button:hover {
+  background: #f3f4f6;
+}
+
+.active {
+  background: #4c7cff !important;
+  color: white !important;
+  border-color: #4c7cff !important;
+}
+
+input {
+  padding: 8px 12px;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+  outline: none;
+  width: 260px;
+}
+
+input:focus {
+  border-color: #4c7cff;
+}
+
+/* ====== table ====== */
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.table th {
+  text-align: left;
+  font-size: 13px;
+  padding: 12px;
+  background: #f9fafb;
+  color: #6b7280;
+  cursor: pointer;
+  user-select: none;
+  transition: 0.2s;
+}
+
+.table th:hover {
+  color: #4c7cff;
+}
+
+.table td {
+  padding: 12px;
+  border-top: 1px solid #f1f1f1;
+  font-size: 14px;
+}
+
+/* ====== calendar widget ====== */
+
+.calendar {
+  background: white;
+  border-radius: 16px;
+  padding: 14px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+}
+
+/* month header */
+
+.month {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #111827;
+}
+
+.month button {
+  border: none;
+  background: #f3f4f6;
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.month button:hover {
+  background: #e5e7eb;
+}
+
+/* grid */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 6px;
+}
+
+.day {
+  height: 34px;
+  border-radius: 10px;
+  border: none;
+  background: #f3f4f6;
+  cursor: pointer;
+  font-size: 13px;
+  transition: 0.15s;
+}
+
+.day:hover {
+  background: #e0e7ff;
+}
+
+/* states */
+
+.has {
+  background: #dbeafe;
+  font-weight: 600;
+}
+
+.today {
+  outline: 2px solid #4c7cff;
+  background: white;
+}
+
+.selected {
+  background: #4c7cff;
+  color: white;
+}
+
+/* ====== slots ====== */
+
+.slots {
+  margin-top: 12px;
+}
+
+.slots h4 {
+  margin: 10px 0;
+  font-size: 14px;
+  color: #111827;
+}
+
+.slot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background: #f9fafb;
+  border-radius: 10px;
+  margin-top: 6px;
+}
+
+.empty {
+  color: #9ca3af;
+  font-size: 13px;
+  margin-top: 8px;
+}
+
+.time {
+  margin-right: 8px;
+}
+
+/* ====== links ====== */
+
+.link {
+  color: #4c7cff;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.petLink {
+  margin-left: 8px;
+  color: #4c7cff;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 13px;
+}
+
+.petLink:hover {
+  text-decoration: underline;
+}
+
+.cancel {
+  background: #fee2e2;
+  color: #ef4444;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 12px;
+  transition: 0.2s;
+}
+
+.cancel:hover {
+  background: #fecaca;
+}

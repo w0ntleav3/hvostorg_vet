@@ -1,0 +1,110 @@
+.container {
+  min-height: 100vh;
+  background: #f6f7f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.formBox {
+  background: white;
+  width: 100%;
+  max-width: 360px;
+  padding: 28px 26px;
+  border-radius: 14px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+  box-sizing: border-box;
+}
+
+.backBtn {
+  background: none;
+  border: none;
+  color: #6b7280;
+  cursor: pointer;
+  font-size: 13px;
+  margin-bottom: 10px;
+  padding: 0;
+}
+
+.backBtn:hover {
+  text-decoration: underline;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 22px;
+  font-size: 22px;
+  color: #111827;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%; /* Гарантируем, что форма не сжимается */
+}
+
+.label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 100%;
+}
+
+.label span {
+  font-size: 13px;
+  color: #374151;
+}
+
+/* Сделали один четкий класс для всех инпутов */
+.input {
+  width: 100%;
+  height: 40px;
+  padding: 0 12px; 
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  font-size: 14px;
+  box-sizing: border-box; /* Важно: паддинги больше не раздувают ширину */
+}
+
+.input:focus {
+  outline: none;
+  border-color: #4c7cff;
+  box-shadow: 0 0 0 2px rgba(76,124,255,0.15);
+}
+
+.submitBtn {
+  width: 100%;
+  height: 40px; 
+  margin-top: 6px;
+  border-radius: 8px;
+  border: none;
+  background: #4c7cff;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.submitBtn:hover {
+  background: #3a66e0;
+}
+
+.login {
+  margin-top: 18px;
+  text-align: center;
+  font-size: 13px;
+}
+
+.login span {
+  color: #4c7cff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.login span:hover {
+  text-decoration: underline;
+}

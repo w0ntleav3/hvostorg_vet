@@ -1,0 +1,49 @@
+services:
+  # 1. Сервис базы данных
+  db:
+    image: postgres:15-alpine
+    container_name: hvosstorg_db
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: hvosstorg
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  # 2. Объединенный сервис Backend (Flask)
+  backend:
+    build: ./vetclinic-back # Убедитесь, что путь верный
+    container_name: hvosstorg_backend
+    restart: always
+    environment:
+      DATABASE_URL: postgresql://postgres:postgres@db:5432/hvosstorg
+      JWT_SECRET_KEY: super_secret_jwt_key_2026
+      FLASK_ENV: development # В dev режиме Flask лучше видит изменения
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./vetclinic-back:/app # Пробрасываем папку для Hot Reload
+    # Запускаем через --debug для автоматической перезагрузки
+    command: flask run --host=0.0.0.0 --port=5000 --debug 
+    depends_on:
+      - db
+
+  # 3. Сервис React SPA (Frontend)
+  frontend:
+    build: ./vetclinic-front
+    container_name: hvosstorg_frontend
+    restart: always
+    ports:
+      - "3000:3000" 
+      - "80:80"    
+    volumes:
+      - ./vetclinic-front:/app
+      - /app/node_modules 
+    depends_on:
+      - backend
+
+volumes:
+  pgdata:

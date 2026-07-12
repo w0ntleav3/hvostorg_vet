@@ -1,0 +1,61 @@
+/* src/pages/ServicesPage/ServicesPage.module.css */
+
+.ServicesPage {
+  min-height: 100vh;
+  background: #f6f7f9;
+  padding: 30px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* кнопка назад */
+.backBtn {
+  background: none;
+  border: none;
+  color: #4c7cff;
+  cursor: pointer;
+  font-size: 14px;
+  margin-bottom: 20px;
+  padding: 0;
+}
+
+.backBtn:hover {
+  text-decoration: underline;
+}
+
+/* заголовок */
+h1 {
+  margin-bottom: 20px;
+  font-size: 28px;
+  color: #111827;
+}
+
+/* обёртка под таблицу (если понадобится) */
+.tableWrapper {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* если таблица без своего css */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+th, td {
+  padding: 10px 12px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+th {
+  background: #f9fafb;
+  text-align: left;
+  font-weight: 600;
+}
+
+tr:hover td {
+  background: #f3f4f6;
+}
