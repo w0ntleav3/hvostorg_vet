@@ -167,6 +167,24 @@ npm start
 
 ---
 
+## Скриншоты
+
+### Авторизация
+
+![Авторизация](screenshots/login.png)
+
+### Главная страница
+
+![Главная](screenshots/dashboard.png)
+
+### Карточка пациента
+
+![Пациент](screenshots/patients.png)
+
+### Запись на прием
+
+![Прием](screenshots/appointment.png)
+
 ## Автор
 
 Карина
